@@ -1,5 +1,17 @@
-const test = (string) => {
-  return string.toLowerCase().split(' ').map((letra)=> letra.toUpperCase().charAt(0) + letra.slice(1)).join(' ') + ', please'
+nn = 25, 
+ll = ['small', 'small', 'large', 'medium', 'small']
+function test(wedgesNeeded = nn, limes = ll) {
+  const LIME_SIZE = {
+    small: 6,
+    medium: 8,
+    large: 10,
+  }
+
+  
 }
 
-console.log(test('horse'));
+function main(){
+  console.log(test());
+}
+
+main()
