@@ -1,22 +1,13 @@
-const tickets = {
-  '0H2AZ123': null,
-  '23LA9T41': 'Verena Nardi',
-  'something': {
-    name: 'andres'
+function palindrom(number) {
+  let num = Number(number);
+  if (number.length === 0) {
+    return 'Required field';
+  } else if (!num) {
+    return 'Must be a number besides 0';
+  } else {
+    return '';
   }
-};
-
-const tickets2 = {
-  '0H2AZ123': null,
-  '23LA9T41': 'Verena Nardi',
-};
-
-
-function main(tickets, ticketId) {
-  return tickets.something?.name
 }
-
-
-console.log(main(tickets, 'RE90VAW7'));
-console.log(main(tickets2, '0H2AZ123'));
-console.log(main(tickets, '23LA9T41'));
+console.log(palindrom('123'));
+console.log(palindrom(''));
+console.log(palindrom('abcf'));
