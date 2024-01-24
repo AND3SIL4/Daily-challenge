@@ -1,13 +1,20 @@
-function palindrom(number) {
-  let num = Number(number);
-  if (number.length === 0) {
-    return 'Required field';
-  } else if (!num) {
-    return 'Must be a number besides 0';
-  } else {
-    return '';
+function bubbleSort(array) {
+    var done = false;
+    while (!done) {
+      done = true;
+      for (var i = 1; i < array.length; i += 1) {
+        if (array[i - 1] > array[i]) {
+          done = false;
+          var tmp = array[i - 1];
+          array[i - 1] = array[i];
+          array[i] = tmp;
+        }
+      }
+    }
+  
+    return array;
   }
-}
-console.log(palindrom('123'));
-console.log(palindrom(''));
-console.log(palindrom('abcf'));
+  
+  var numbers = [12, 10, 15, 11, 14, 13, 16];
+  bubbleSort(numbers);
+  console.log(numbers);
