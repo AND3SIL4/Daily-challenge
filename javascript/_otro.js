@@ -1,20 +1,26 @@
-function bubbleSort(array) {
-    var done = false;
-    while (!done) {
-      done = true;
-      for (var i = 1; i < array.length; i += 1) {
-        if (array[i - 1] > array[i]) {
-          done = false;
-          var tmp = array[i - 1];
-          array[i - 1] = array[i];
-          array[i] = tmp;
-        }
-      }
+function quantities(arr) {
+  let noodles = 0;
+  let sauce = 0;
+
+  for (let i = 0; i < arr.length; i++) {
+    if (arr[i] === 'noodles') {
+        noodles += 50;
     }
-  
-    return array;
   }
-  
-  var numbers = [12, 10, 15, 11, 14, 13, 16];
-  bubbleSort(numbers);
-  console.log(numbers);
+
+  for (let i = 0; i < arr.length; i++) {
+    if (arr[i] === 'sauce') {
+        sauce += 0.2;
+    }
+  }
+
+  let obj = {
+    noodles: noodles,
+    sauce: sauce,
+  };
+
+  return obj;
+}
+
+let arr = ["sauce", "noodles", "sauce", "meat", "mozzarella", "noodles"];
+console.log(quantities(arr));
