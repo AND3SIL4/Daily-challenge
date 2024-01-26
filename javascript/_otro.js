@@ -1,26 +1,19 @@
-function quantities(arr) {
-  let noodles = 0;
-  let sauce = 0;
+function scaleRecipe(recipe, portions) {
+  let newRecipe = recipe;
 
-  for (let i = 0; i < arr.length; i++) {
-    if (arr[i] === 'noodles') {
-        noodles += 50;
-    }
+  for (let i in newRecipe){
+    newRecipe[i] *= portions;
   }
-
-  for (let i = 0; i < arr.length; i++) {
-    if (arr[i] === 'sauce') {
-        sauce += 0.2;
-    }
-  }
-
-  let obj = {
-    noodles: noodles,
-    sauce: sauce,
-  };
-
-  return obj;
+  console.log(recipe);
+  console.log(newRecipe);
 }
 
-let arr = ["sauce", "noodles", "sauce", "meat", "mozzarella", "noodles"];
-console.log(quantities(arr));
+
+const recipe = {
+  sauce: 0.5,
+  noodles: 250,
+  meat: 150,
+  tomatoes: 3,
+  onion: 0.5,
+};
+console.log(scaleRecipe(recipe, 6));
