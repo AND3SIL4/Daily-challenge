@@ -1,19 +1,23 @@
-function scaleRecipe(recipe, portions) {
-  let newRecipe = recipe;
+// * Sintax one
 
-  for (let i in newRecipe){
-    newRecipe[i] *= portions;
-  }
-  console.log(recipe);
-  console.log(newRecipe);
+let squareLength = 4;
+
+// Main function that recived a parametter
+function applyToSquare(callback) {
+  return callback(squareLength);
 }
 
+// Second function that is a parameter
+function areOfSquare(number) {
+  return number * number;
+}
 
-const recipe = {
-  sauce: 0.5,
-  noodles: 250,
-  meat: 150,
-  tomatoes: 3,
-  onion: 0.5,
-};
-console.log(scaleRecipe(recipe, 6));
+console.log(applyToSquare(areOfSquare));
+
+// * Sintax two
+
+console.log(
+  applyToSquare(function sqaurePerimeter(side) {
+    return side * 4;
+  })
+);
